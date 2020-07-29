@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+    <div class="panel panel-success">
+        {% for publisher in publishers %}
+            <ul class="list-group">
+                <li class="list-group-item">
+                    {{ publisher.name }}
+                    <ul class="list-group">
+                        {% for book in publisher.books.all %}
+                            <li class="list-group-item"> {{ book.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        {% endfor %}
+    </div>
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Список выданных книг</title>
+</head>
+<body>
+	<ul>
+		{% for friend in object_list %}
+		    <li>{{ friend.name }} {{ friend.surname }} взял книгу {{ friend.book }} {{ friend.data }}</li>
+		{% endfor %}
+	</ul>
+
+</body>
+</html>
+{% endblock %}
+
